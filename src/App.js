@@ -4,9 +4,11 @@ import DropDownPage from "./pages/DropDownPage";
 import ButtonPage from "./pages/ButtonPage";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
+import CounterPage from "./pages/CounterPage";
 import SideBar from "./components/SideBar";
 
 function App() {
+  let initalCount = 10;
   return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
       <SideBar />
@@ -25,6 +27,9 @@ function App() {
         </Route>
         <Route path="/table">
           <TablePage />
+        </Route>
+        <Route path="/counter">
+          <CounterPage initalCount={initalCount} />
         </Route>
       </div>
     </div>
